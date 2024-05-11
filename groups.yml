@@ -1,9 +1,9 @@
 # groups.yml
 ---
-- name: "Local Host Group"
+- name: "windows_group"
   tower_group:
-    name: localhost
-    description: "Local Host Group"
-    inventory: "Local Inventory"
+    name: windows_group
+    description: "Win Group"
+    inventory: "Windows"
     state: present
 ...
