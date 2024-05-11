@@ -1,6 +1,11 @@
 ---
-- name: Ping a Windows Host
-  hosts: windows_group
+- name: Ejecutar curl a una dirección IP
+  hosts: tu_host
   tasks:
-    - name: Ping Windows Host
-      ping:
+    - name: Ejecutar curl
+      shell: curl http://10.152.183.82
+      register: curl_output
+      ignore_errors: true
+
+    - debug:
+        var: curl_output.stdout
