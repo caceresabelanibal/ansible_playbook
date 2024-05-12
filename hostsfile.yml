@@ -14,5 +14,5 @@
       debug:
         msg: "El archivo '/etc/hosts' {{ 'existe' if file_stat.stat.exists else 'no existe' }}"
 
-    - name: ping
-      shell: apt-get update && apt-get install iputils-ping -y
+    - name: comando
+      shell: apt update
