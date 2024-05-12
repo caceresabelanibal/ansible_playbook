@@ -1,0 +1,13 @@
+---
+- name: Ejemplo de playbook de prueba local
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Verificar si el archivo '/etc/hosts' existe localmente
+      stat:
+        path: /etc/hosts
+      register: file_stat
+
+    - name: Imprimir el resultado de la verificación local
+      debug:
+        msg: "El archivo '/etc/hosts' {{ 'existe' if file_stat.stat.exists else 'no existe' }}"
