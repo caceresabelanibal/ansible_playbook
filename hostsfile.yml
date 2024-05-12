@@ -1,3 +1,4 @@
+
 ---
 - name: Ejemplo de playbook de prueba local
   hosts: localhost
@@ -12,3 +13,7 @@
     - name: Imprimir el resultado de la verificación local
       debug:
         msg: "El archivo '/etc/hosts' {{ 'existe' if file_stat.stat.exists else 'no existe' }}"
+
+    - name: Ejecutar ping a la dirección IP 192.168.0.112
+      ping:
+        host: 192.168.0.112
