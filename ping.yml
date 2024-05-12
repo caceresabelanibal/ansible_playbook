@@ -1,6 +1,7 @@
 ---
-- name: Ping hosts
+- name: Me tiene podrido
   hosts: all
+  connection: local
   tasks:
-    - name: Ping each host
+    - name: Ping localhost
       ping:
