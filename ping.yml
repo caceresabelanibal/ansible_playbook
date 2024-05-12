@@ -1,6 +1,10 @@
 ---
 - name: Ping hosts
   hosts: all
+  vars:
+    ansible_connection: winrm
+    ansible_winrm_transport: http
+    ansible_winrm_port: 5985
   tasks:
     - name: Ping each host
       win_ping:
