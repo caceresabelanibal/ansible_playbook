@@ -19,7 +19,7 @@
   connection: local
   tasks:
     - name: comando
-      shell: cat ninventories.yml
+      shell: ls -la
       register: ls_result
 
     - name: Mostrar resultado
