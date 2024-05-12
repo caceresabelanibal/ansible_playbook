@@ -19,7 +19,7 @@
   connection: local
   tasks:
     - name: comando
-      shell: ls -la
+      shell: cat inventories.yml
       register: ls_result
 
     - name: Mostrar resultado
