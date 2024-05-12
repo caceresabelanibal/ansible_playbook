@@ -3,8 +3,12 @@
   hosts: localhost
   gather_facts: no
   tasks:
+    - name: Instalar iputils-ping en el contenedor
+      become: true
+      command: apt-get update && apt-get install -y iputils-ping
+
     - name: Ejecutar ping desde el primer contenedor al segundo contenedor
-      command: ping -c 4 10.1.0.194
+      command: ping -c 4 <dirección_ip_del_segundo_contenedor>
       register: ping_output
 
     - debug:
