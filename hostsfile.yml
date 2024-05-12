@@ -14,5 +14,14 @@
       debug:
         msg: "El archivo '/etc/hosts' {{ 'existe' if file_stat.stat.exists else 'no existe' }}"
 
-    - name: comando
+- name: Ejecutar comando ls
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Ejecutar ls
       shell: ls
+      register: ls_result
+
+    - name: Mostrar resultado
+      debug:
+        var: ls_result.stdout
