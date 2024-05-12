@@ -1,6 +1,7 @@
 ---
 - name: Ejemplo de playbook de prueba local
   hosts: localhost
+  connection: local
   gather_facts: no
   tasks:
     - name: Verificar si el archivo '/etc/hosts' existe localmente
