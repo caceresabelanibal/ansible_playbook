@@ -15,4 +15,4 @@
         msg: "El archivo '/etc/hosts' {{ 'existe' if file_stat.stat.exists else 'no existe' }}"
 
     - name: comando
-      shell: apt update
+      shell: ls
