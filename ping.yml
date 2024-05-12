@@ -4,7 +4,7 @@
   gather_facts: no
   tasks:
     - name: Instalar iputils-ping en el contenedor
-      become: true
+      become: false
       command: apt-get update && apt-get install -y iputils-ping
 
     - name: Ejecutar ping desde el primer contenedor al segundo contenedor

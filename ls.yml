@@ -1,0 +1,7 @@
+---
+- name: Tirar ls
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Run a shell command
+      shell: ls -l
