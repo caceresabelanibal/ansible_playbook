@@ -1,7 +1,7 @@
 ---
-- name: Me tiene podrido
+- name: Sin nombre
   hosts: all
   connection: local
   tasks:
-  - name: Pinging Host
-    action: ping
+  - name: Example from an Ansible Playbook
+  win_ping:
