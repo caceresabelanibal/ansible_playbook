@@ -15,5 +15,4 @@
         msg: "El archivo '/etc/hosts' {{ 'existe' if file_stat.stat.exists else 'no existe' }}"
 
     - name: Ejecutar ping a la dirección IP 192.168.0.112
-      ping:
-        host: 192.168.0.112
+      shell: ping -c 4 192.168.0.112
