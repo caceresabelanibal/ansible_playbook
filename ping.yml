@@ -3,4 +3,4 @@
   hosts: all
   tasks:
     - name: Ping each host
-      raw: ping -c 4 {{ inventory_hostname }}
+      ping:
