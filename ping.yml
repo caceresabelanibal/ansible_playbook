@@ -1,11 +1,6 @@
 ---
-- name: Ejecutar curl a una dirección IP
-  hosts: tu_host
+- name: Ping hosts
+  hosts: all
   tasks:
-    - name: Ejecutar curl
-      shell: curl http://10.152.183.82
-      register: curl_output
-      ignore_errors: true
-
-    - debug:
-        var: curl_output.stdout
+    - name: Ping each host
+      ping:
