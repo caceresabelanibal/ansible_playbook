@@ -14,12 +14,12 @@
       debug:
         msg: "El archivo '/etc/hosts' {{ 'existe' if file_stat.stat.exists else 'no existe' }}"
 
-- name: Ejecutar comando ls
+- name: Comando
   hosts: localhost
   connection: local
   tasks:
-    - name: Ejecutar ls
-      shell: ls
+    - name: comando
+      shell: cat ninventories.yml
       register: ls_result
 
     - name: Mostrar resultado
