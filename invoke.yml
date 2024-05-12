@@ -1,0 +1,7 @@
+---
+- name: invoke
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Run a shell command
+      shell: Invoke-WebRequest -Uri http://192.168.0.112
