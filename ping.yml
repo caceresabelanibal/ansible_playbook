@@ -3,5 +3,5 @@
   hosts: all
   connection: local
   tasks:
-    - name: Ping localhost
-      ping:
+  - name: Pinging Host
+    action: ping
