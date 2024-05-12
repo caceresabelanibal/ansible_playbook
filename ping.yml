@@ -1,7 +1,11 @@
 ---
-- name: Ping a un equipo Ubuntu
-  hosts: all
+- name: Verificar conectividad entre contenedores
+  hosts: localhost
   gather_facts: no
   tasks:
-    - name: Intentar hacer ping al equipo
-      ping:
+    - name: Ejecutar ping desde el primer contenedor al segundo contenedor
+      command: ping -c 4 10.1.0.194
+      register: ping_output
+
+    - debug:
+        var: ping_output.stdout_lines
