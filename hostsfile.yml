@@ -20,8 +20,8 @@
   tasks:
     - name: comando
       ping:
-      register: ls_result
+#      register: ls_result
 
-    - name: Mostrar resultado
-      debug:
-        var: ls_result.stdout
+ #   - name: Mostrar resultado
+ #     debug:
+ #       var: ls_result.stdout
